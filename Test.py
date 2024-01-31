@@ -1,8 +1,13 @@
-# print("hello")
+matrix=[]
+row=int(input("Enter the rows:"))
+col=int(input("Enter the col"))
+for i in range(row):
+    row=[]
+    for j in range(col):
+        ele=input(f"input the element({i+1},{j+1}):")
+        row.append(ele)
+    matrix.append(row)
 
-heads = int(input("Enter the heads count :"))
-legs = int(input("Enter the legs count :"))
-heads = 33
-for i in range (1 , heads+1):
-    if (4*i) + (2*(heads-i)) == 108:
-        print(f"number of chicken :{heads -i} and number of rabbit:{i}")
+transposeofmatrix=[[matrix[j][i] for j in range (len(matrix))] for i in range(len(matrix[0]))]
+print(matrix)
+print(transposeofmatrix)
